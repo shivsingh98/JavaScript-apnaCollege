@@ -126,3 +126,72 @@ Old syntax of writing variables
 
 ## Identifier Rules
 ![identifier](./img/identifier.png)   
+
+## camelCase
+Way of writing identifiers
+
+- camelCase (JS naming convention)
+- snake_case
+- PascalCase
+
+## Boolean
+Boolean represent a truth value -> true or false / yes or no
+
+```js
+  let age = 23;
+  let isAdult = false;
+```
+## What is TypeScript?
+Static Typed, where JS is dynamic typed.   
+- Designed by Microsoft. 
+
+## String
+Strings are <mark>text</mark> or sequence of characters.
+
+```js
+  let name = 'Shiv Singh';
+  let char = 'a';
+  let num = '23';
+  let empty = '';
+  let ssentence = 'This is "apple"';
+```
+
+## String Indices
+- index means position
+```js
+let name = 'SHIV SINGH';
+S H I V _ S I N G H
+_ _ _ _ _ _ _ _ _ _
+0 1 2 3 4 5 6 7 8 9
+name[0] -> 'S'
+name[1] -> 'H'
+it is called zero based indexing.
+```
+- to find the length of string we use .length property.
+
+## Concatenation
+Adding strings together.
+
+```js
+"tony" + " " + "stark" = "tony stark"
+"tony" + 1 = "tony1"
+```
+
+## null & undefined in JS
+
+**undefined**
+A variable that has not been assigned a value is of type undefined.
+
+```js
+let a;
+console.log(a); // undefined
+```
+
+## null 
+The null value represents the intentional absence of any object value.    
+To be explicitly assigned.
+
+```js
+  let a = null;
+  console.log(a); // null
+```
