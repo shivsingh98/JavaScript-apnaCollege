@@ -286,3 +286,53 @@ console.log('after my if statement');
 ## Nested if-else
 
 ![nested-if-else](./img/nested-if-else.png)   
+
+
+## Logical Operators:
+![logicalAND](./img/logicalAND.png)  
+```js
+  // Logical Operators
+  let marks = 86;
+
+  if(marks >= 33 && marks >= 80){
+    console.log('pass');
+    console.log('A+');
+  }  
+```
+
+## Logical OR (||)
+```js
+  let marks = 86;
+
+  if(marks >= 80 || marks >= 33){
+    console.log('pass');
+  }
+```
+## Logical NOT
+![logicalNOT](./img/logicalNOT.png)  
+```js
+  let marks = 86;
+
+  if(!(marks > 33)){
+    console.log('pass'); 
+  }
+```
+
+## Truthy & Falsy
+
+![truthy&falsy](./img/truthy&falsy.png)  
+
+## Switch Statement
+
+![switch](./img/switch.png)  
+
+## Alert & Prompt
+
+![alert&prompt](./img/alert&prompt.png)  
+
+```js
+  alert('Hello!');
+  console.error('this is an error');
+  console.warn('this is a warning');
+  console.log('this is an log');
+```
