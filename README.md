@@ -259,3 +259,30 @@ Comparison Operator to compare 2 values. It returns boolean value.
   }
   // some code after if
 ```
+```js
+  console.log('Before my if statement');
+let age = 21;
+if(age >= 18){
+    console.log('you can vote');
+    console.log('you can drive');
+}
+console.log('after my if statement');
+```
+
+## else if Statement
+
+```js
+  if(condition1){
+    //Do Something
+  }else if(condition2){
+    //Do Something
+  }else if(condition3){
+    //Do Something
+  }else{
+    //Do Something
+  }
+```
+
+## Nested if-else
+
+![nested-if-else](./img/nested-if-else.png)   
