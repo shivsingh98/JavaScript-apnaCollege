@@ -195,3 +195,67 @@ To be explicitly assigned.
   let a = null;
   console.log(a); // null
 ```
+
+## console.log()
+To write (log) a message on the console.
+
+```js
+  console.log('Just Coder');// Just Coder
+  console.log(1234); // 1234
+  console.log(2+2); // 4
+  console.log('Just','Coder', 123); // Just Coder 123
+```
+
+## Linking JS File
+```js
+  <script src="app.js"></script>
+```
+
+## Template Literals
+They are used to add embedded expressions in a string.
+back tick (` ${exp}`)
+```js
+  let a = 5;
+  let b = 10;
+  console.log(`Your pay  ${a + b} rupees`);
+  // console.log('Your pay', a + b, 'rupees')
+```
+
+## Operators in JS
+
+- Arithmetic (+, -, *, /, %, **)  
+- Unary (++, --)  
+- Asssignment (=, +=, -=, *=, /=, %= etc.)   
+- Comparison  (<, >, <=, >=, ==, !=, ===, !==)
+- Logical  
+
+## Comparison Operators
+Comparison Operator to compare 2 values. It returns boolean value.
+- <
+- \>
+- <=
+- \>=
+- ==
+- !=
+- ===
+- !==
+
+![equality](./img/equality.png)  
+![equaality1](./img/equaality1.png) 
+
+**Note :** have a look on JS unicode.
+
+## Conditional Statements :
+- if-else
+- nested if-else
+- switch
+
+## if Statement 
+```js
+  // some code before if
+
+  if(some condition){
+  // Do something
+  }
+  // some code after if
+```
