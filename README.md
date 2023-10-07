@@ -391,3 +391,125 @@ console.log('after my if statement');
 - Using one method after another. Order of execution will be left to right.   
 
 `str.toUpperCase().trim()`
+
+## slice
+- Returns a part of the original string as a new string.   
+- `str.slice(start, end)` end = end -1; end index not included(non-inclusive)
+- `str.slice(start)` it will assume end = str.length if you pass end > length, it will take till str.length
+- if you pass -ve value it will replace str.length-value for eg: length is 11 and value is -2 so It will replace -2 with 11-2 which is 9.
+
+```js
+  let str = 'IloveCoding';
+  str.slice(5); // coding
+  str.slice(1, 4); // lov 
+  str.slice(-num) = str.slice(length-num);  
+```
+## subString()
+
+
+## replace
+- Searches a value in the string & returns a new string with the value replaced.  
+- It will replace only 1st occurence.
+- here string should be same "apple" and "Apple" are different
+
+```js
+  let str = "ILoveCoding";
+  str.replace("Love", "do"); // IdoCoding
+  str.replace("o", "x"); // ILxvecxing
+```
+
+## repeat
+- Returns a string with the number of copies of a string
+
+```js
+  let str = "Mango";
+  str.repeat(3); // MangoMangoMango
+```
+
+## Array (Data Structure)
+- Linear collection of things.
+- to find the length of the array we use `.length` property.
+- index starts from 0
+- element can be of different types
+- typeof Array is an object
+
+![array](./img/array.png)  
+
+`let arrayName = [ele1, ele2, ele3];`
+
+```js
+  let num = [1, 2, 3, 4, 5];
+
+  console.log(num);
+  console.log(num[4]);
+  console.log(num.length);
+  console.log(typeof num); // object
+```
+## Creating array
+
+```js
+  let num = [1, 2, 3, 4, 5];
+  let names = ["adam", "bib", "riya"]; 
+  let info = ["adam", 23, 6.1, true];  // mixed array
+
+  // empty Array
+  [] // is also an empty array
+  let newArr = []; // [] -> length -> 0 --> newArr[0]--> undefined
+
+   names[0][0] // ==> 'a'
+   names[0].length // ==> 4
+```
+
+## Array Methods
+
+### Push
+- add element to the end/last index 
+- It returns updated length of array
+- you can pass more than one argument
+```js
+    let num = [1, 2, 3, 4, 5];
+    console.log(num.push(7)); // 6 --> new/ updated length of array
+    console.log(num); // [1, 2, 3, 4, 5, 7]
+    console.log(num.push(8, 9, 11)); // 9 --> new/ updated length of array
+```
+
+### Pop
+- deleted from end & return it
+- it removes last element from the array 
+- It returns deleted element
+
+```js
+    let num = [1, 2, 3, 4, 5];
+    console.log(num.pop()); // 5 --> deleted last element
+    console.log(num); // [1, 2, 3, 4]
+    
+```
+
+### Unshift
+- add to start
+- It returns updated length of array
+- you can pass more than one argument
+```js
+    let num = [1, 2, 3, 4, 5];
+    console.log(num.unshift(7)); // 6 --> new/ updated length of array
+    console.log(num); // [7, 1, 2, 3, 4, 5]
+    console.log(num.unshift(8, 9, 11)); // 9 --> new/ updated length of array
+    console.log(num); // [8, 9, 11, 7, 1, 2, 3,  4, 5]
+```
+
+
+### Shift
+- delete from start & returns it
+- it removes 1st element from the array 
+- It returns deleted element
+
+```js
+    let num = [1, 2, 3, 4, 5];
+    console.log(num.shift()); // 4 --> deleted last element
+    console.log(num); // [2, 3, 4, 5]
+    
+```
+
+## Array Methods
+![array method](./img/array1.png)    
+ 
