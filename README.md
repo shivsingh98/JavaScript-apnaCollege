@@ -336,3 +336,58 @@ console.log('after my if statement');
   console.warn('this is a warning');
   console.log('this is an log');
 ```
+
+## String Methods
+**Methods -** action that can perform on objects.
+
+**Format**   
+`stringName.method()`   
+
+![trim()](./img/trim.png)  
+- trim() returns a new string It does not affect orignal string because Strings in JS are Immutable.  
+
+## Strings in JS are Immutable(means cant change)
+- No changes can be made to strings.
+- Whenever we do try to make a change, a new string is created and old one remains same.
+
+## Uppercase
+- It converts given string in to uppercase.   
+`let str = "Random String;`      
+`str.toUpperCase();` // RANDOM STRING   
+
+## Lowercase
+- It converts given string in to Lowercase.   
+`let str = "Random String;`      
+`str.toLowerCase();` // random string
+
+## String Methods with Arguments : 
+- Argument is a some value that we pass to the method.   
+**Format**   
+`stringName.method(arg)`
+
+## indexOf() 
+- Returns the <mark>first index of occurence</mark> of some value in string. or gives -1 if not found.
+
+```js
+  let str = 'IloveCoding';
+
+  str.indexOf('love'); // 1
+  str.indexOf('J'); // -1(not found)
+  str.indexOf('o'); // 2(only 1 index)
+```
+
+## lastIndexOf()
+- Returns the <mark>last index of occurence</mark> of some value in string. or gives -1 if not found.
+
+```js
+  let str = 'IloveCoding';
+
+  str.lastIndexOf('love'); // 1
+  str.lastIndexOf('J'); // -1(not found)
+  str.lastIndexOf('o'); // 2(only 1 index)
+```
+
+## Method Chaining
+- Using one method after another. Order of execution will be left to right.   
+
+`str.toUpperCase().trim()`
