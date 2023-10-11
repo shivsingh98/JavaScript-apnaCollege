@@ -19,7 +19,19 @@ console.log(name.slice(4).replace("l", "t")); // Cotege
 
 let months = ['january', 'july', 'march', 'august'];
 
-months.shift();
-months.shift();
-months.unshift('july', 'june');
+// months.shift();
+// months.shift();
+// months.unshift('july', 'june');
+// console.log(months);
+
+// question
+
+let newarr = months.splice(0, 2, 'july','june');
 console.log(months);
+console.log(newarr);
+
+// question
+
+let langs = ['c', 'c++', 'html', 'javascript', 'python', 'java', 'c#', 'sql'];
+console.log(langs.reverse().indexOf('javascript'));
+console.log(langs);

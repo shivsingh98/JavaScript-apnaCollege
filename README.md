@@ -342,9 +342,19 @@ console.log('after my if statement');
 
 **Format**   
 `stringName.method()`   
-
+## trim Method
+- ### trim()
+- ### trimStart()
+- ### trimEnd()
 ![trim()](./img/trim.png)  
 - trim() returns a new string It does not affect orignal string because Strings in JS are Immutable.  
+
+```js
+let str = '      Hello World!     ';
+console.log(str.trimStart());// 'Hello World!      '
+console.log(str.trimEnd());// '     Hello World!'
+console.log(str.trim()); // 'Hello World!'
+```
 
 ## Strings in JS are Immutable(means cant change)
 - No changes can be made to strings.
@@ -513,3 +523,175 @@ console.log('after my if statement');
 ## Array Methods
 ![array method](./img/array1.png)    
  
+- all arguments are case sensitive.
+
+## Concatination & Reverse
+![concat](./img/concat.png) 
+- If you want to concat or merge to arrays so we use **concat()** method. 
+- This method basically merge two arrays and return a new array. It does not manipulate orignal array.
+- **Syntax** - 
+- `array1.concat(array2);`
+- ```js
+    let arr1 = [1, 2, 3, 4];
+    let arr2 = [5, 6, 7, 8];
+
+    let arr3 = arr1.concat(arr2);
+    console.log(arr3);
+    console.log(arr2.concat(arr1)); // order matters here
+```
+
+- If you want to reverse an array, so we use **reverse()** method. 
+- This method basically reverse the orignal array and return reversed 
+  array.
+- **Syntax** - 
+- `array1.reverse();`
+- ```js
+    let arr1 = [1, 2, 3, 4];
+    let arr3 = arr1.reverse();
+    console.log(arr3);
+    console.log(arr1); 
+```
+
+
+
+![slice](./img/slice.png)
+
+- `slice yaani tukda`
+- It returns copy of a particular portion of an array as a new array.
+- **syntax** - `arr.slice(startIndex, endIndex)`
+- `endIndex` is exclusive that means we do not include inding index. `endIndex-1`
+- arguments are optional here.
+- I you pass invalid arguments (like you have an array of length 3 and you are passing 5) here it will return an empty array `[]`.
+- `console.log(colors.slice(6)); // []`
+```js
+  let colors = ['red', 'yellow', 'blue', 'orange', 'pink', 'white']; 
+
+  console.log(colors.slice());
+  console.log(colors.slice(2));
+  console.log(colors.slice(2, 3));
+  console.log(colors.slice(-2)); // length - 2
+  console.log(colors.slice(5));
+```
+
+## splice Method
+![splice](./img/splice.png) 
+
+- here we pass only startIndex not endEndIndex.
+- delete count is optional you can write 0 here.
+- splice modifies orignal array and returns an array.
+- if we pass only starting index it will work same as slice(). refer eg1 in image.
+
+
+## sort Method
+- It sorts an array.
+- `arr.sort()`
+- for string it works very well but in case of numbers it doesn't.
+- `let marks = [99, 89, 67, 42, 100];
+console.log(marks.sort()); // [ 100, 42, 67, 89, 99 ]`
+- It happens because it converst array elements into string first and after converting starts sorting.
+- `arr.sort((a,b) => a-b)` ascending
+- `arr.sort((a,b) => b-a)` descending
+
+```js
+let colors = ['red', 'yellow', 'blue', 'orange', 'pink', 'white', 'black']; 
+console.log(colors.sort()); // [
+  'black',  'blue',
+  'orange', 'pink',
+  'red',    'white',
+  'yellow'
+]
+
+let marks = [99, 89, 67, 42, 100];
+console.log(marks.sort()); // [ 100, 42, 67, 89, 99 ]
+```
+
+## Array References 
+- Reference means adress in memory.
+```js
+console.log('name' == 'name'); // true
+console.log('name' === 'name'); // true
+console.log([1] == [1]); // false
+console.log([1] === [1]); // false
+console.log([] === []); // false
+``` 
+- when array created in memory a refrence variable created.
+- `let num = [1, 2, 3]` num store address of array not actual array
+```js
+  arr1 = [1];
+  arr2 = [1];
+  arr1 === arr2; // false because both arr1 and arr2 are storing different memory locations.
+```
+![reference](./img/reference.png) 
+- here in the image arr is storing address of array and we assined arr to arrCopy so now arrCopy is also containing the same address. that's why when we push 'c' in arrCopy , arr will also update because both variable are reffering to the same array.
+
+```js
+  let arr = ['a', 'b', 'c'];
+  let arrCopy = arr;
+  console.log(arrCopy === arr ); // true
+
+  arrCopy.push('d');
+  console.log(arrCopy);
+  console.log(arr);
+```
+
+## Constant Arrays :
+```js
+t a = 5;
+ a = a+ 5;
+ console.log(a);
+
+const b = 5;
+b = b+ 5;
+console.log(b); // error : TypeError: Assignment to constant variable.
+
+// butttttt.....
+```
+- when we make an array constant we can perform operations on the elements of that array(like we can increase length of that array) but we can not completely convert in to new array.
+
+```js
+  // we can do
+  let arr = [1, 2, 3];
+  arr.push(4);
+
+  // we can not do
+
+  arr = [5, 4, 6, 7]; // error : TypeError: Assignment to constant variable.
+  // when we are making arr constant that's not mean that we are making array constant, it simply means we are making constant address of that array.after making arr constant address will be constant.
+
+  let marks = [99, 89];
+  arr = marks; // error TypeError: Assignment to constant variable.
+```
+
+## Nested Arrays :
+![nestedArrays](./img/nestedArrays.png)  
+
+- here length of nums is 3.
+![nestedArrays1](./img/nestedArrays1.png) 
+- `arr[row][column]`
+- nums[1][2]; // undefined
+
+- To print object in the table form
+```js
+ const ticTac = [ ['X', null, 'O'], [null, 'X', null], ['O', null, 'X']];
+ console.table(ticTac);
+┌─────────┬──────┬──────┬──────┐
+│ (index) │  0   │  1   │  2   │
+├─────────┼──────┼──────┼──────┤
+│    0    │ 'X'  │ null │ 'O'  │
+│    1    │ null │ 'X'  │ null │
+│    2    │ 'O'  │ null │ 'X'  │
+└─────────┴──────┴──────┴──────┘
+
+// Important
+ticTac[0].splice(1, 1, 'O');
+console.log(ticTac);
+ console.table(ticTac);
+
+┌─────────┬──────┬──────┬──────┐
+│ (index) │  0   │  1   │  2   │
+├─────────┼──────┼──────┼──────┤
+│    0    │ 'X'  │ 'O'  │ 'O'  │
+│    1    │ null │ 'X'  │ null │
+│    2    │ 'O'  │ null │ 'X'  │
+└─────────┴──────┴──────┴──────┘
+```
