@@ -330,6 +330,8 @@ console.log('after my if statement');
 
 ![alert&prompt](./img/alert&prompt.png)  
 
+- prompt always return a string to convert string to number use `parseInt()` method.
+
 ```js
   alert('Hello!');
   console.error('this is an error');
@@ -695,3 +697,135 @@ console.log(ticTac);
 │    2    │ 'O'  │ null │ 'X'  │
 └─────────┴──────┴──────┴──────┘
 ```
+
+
+# Loops
+- used to iterate(repeat) a piece of code.
+
+## For loop
+```js
+// syntax
+for(initialisation; condition; updation){
+  // do something
+}
+
+//example:
+for(let i=1; i<=5; i++){
+  console.log(i);
+}
+```
+
+```js
+// infinite loop
+console.log('infinite loop ::');
+
+for(let i=1; i>0; i++){
+    console.log(i);
+}
+
+for(let i=1; i<=5; i--){
+    console.log(i);
+}
+
+for(let i=1; ; i++){
+    console.log(i);
+}
+
+```
+## Nested Loop
+
+```js
+  for(let i=1; i<=5; i++){
+    for(let j=1; j<=5; j++){
+      console.log(`i * j = ${i*j}`)
+    }
+  }
+```
+## while loop
+
+```js
+// syntax
+
+while(condition){
+  // do something
+
+  update // (++/--)
+}
+
+// example
+let i=1;
+while(i<=5){
+  console.log(i);
+  i++;
+}
+```
+
+## break keyword
+break terminat the execution of the loop immediately.
+
+```js
+let i=1;
+while(i<=5){
+  if(i === 3){
+    break;
+  }
+  console.log(i);
+  i++;
+}
+```
+
+## Loops with Array
+
+```js
+let fruits = ["apple", "apple", "banana", "litchi", "orange"];
+
+for(let i=0; i<fruits.length; i++){
+  console.log(i, fruits[i]);
+}
+```
+## Loops with Nested Arrays
+
+```js
+let marks = [[89, 98, 97], [87, 89, 92], [90, 96,87]];
+
+for(let i=0; i<marks.length; i++){
+  console.log(`marks of ${i+1} student`);
+  for(let j=0; j<marks[i].length; j++){
+    console.log(marks[i][j]);
+  }
+}
+```
+
+## for of Loop
+```js
+// syntax
+for(element of collection){
+  // do something
+}
+
+// example
+
+let fruits = ["apple", "apple", "banana", "litchi", "orange"];
+
+for(fruit of fruits){
+  console.log(fruit);
+}
+
+for(char of 'justcoder'){
+  console.log(char);
+}
+```
+
+## Nested for of loop
+```js
+let marks = [[89, 98, 97], [87, 89, 92], [90, 96,87]];
+
+for(student of marks){
+  for(mark of student){
+    console.log(mark);
+  }
+}
+```
+
+# TOdo App
+![todo](./img/todo.png) 
