@@ -834,3 +834,169 @@ for(student of marks){
  let max = Number.MIN_VALUE;
  let min = Number.MAX_VALUE;
  ```
+
+
+
+ # Object
+
+ ## Object Literals
+
+ - Object and Object literals are different.
+
+ - used to store keyed collections & complex entities.
+
+ ```js
+ property => (key, value) pair
+
+ // object are a collection of properties
+
+ const person = {
+  name : 'acb',
+  age : 22,
+  marks : 94.9
+ };
+ ```
+
+ ## Creating Object literals
+
+ ```js
+ let delhi = {
+  latitude : "28.7041 N",
+  longitue : "77.1025 E"
+ };
+
+ const student = {
+  name : 'shiv',
+  age : 22,
+  marks : 94.9
+  city: 'lucknow'
+ };
+ ```
+
+ ## Get Values
+ 1. `objectName.key` // using (.) dot operator
+ 1. `objectName["key"]`
+
+ ```js
+ const student = {
+  name : 'shiv',
+  age : 22,
+  marks : 94.9
+  city: 'lucknow'
+  hobbies: ['reading', 'coding', 'sleeping']
+ };
+
+ console.log(student.name);  // using . operator
+ // accessing array inside object
+ console.log(student.hobbies[1]); // coding
+ console.log(student["name"]);
+
+ // we use [] to use variables, with . we cannot use variable
+ ```
+
+ - JS automatically converts objects keys to strings.
+ - Even if we made the number as a key, the number will be converted to string.
+
+ ```js
+ const obj = {
+  1: "a",
+  2: "b",
+  true: "C",
+  null: "d",
+  undefined: "e"
+ };
+
+ console.log(obj);
+
+ // here all numbers and keyword are treated as string
+ ```
+
+ ## ADD/ Update Value
+ ```js
+ const student = {
+  name : 'shiv',
+  age : 22,
+  marks : 94.9
+  city: 'lucknow'
+  hobbies: ['reading', 'coding', 'sleeping']
+ };
+
+// here changing city to mumbai
+student.city = "mumbai";
+console.log(student.city)// mumbai
+
+// adding new property
+
+student.isAdult = true;
+console.log(student.isAdult); // true
+
+// here we can also update different type of data like number -> string
+ 
+ ```
+
+## Deleteing property
+
+`delete objectName.key`
+```js
+delete student.name; // it will return boolean value true/false
+```
+ ## Nested Object
+- Storing information of multiple students.
+
+ ```js
+const classInfo = {
+  aman: {
+    grade: 'F',
+    city: "Delhi",
+  },
+  shiv: {
+    grade: 'A+',
+    city: "Lucknow",
+  },
+  Ravi: {
+    grade: 'A',
+    city: "Sitapur",
+  }
+};
+
+  console.log(classInfo.aman.grade);
+ ```
+
+
+ ## Array of Object
+- Storing information of multiple students.
+
+ ```js
+
+    const classInfo1 = [
+        {
+          name: 'aman',
+          grade: 'F',
+          city: "Delhi",
+        },
+         {
+          name: 'Ravi',
+          grade: 'A+',
+          city: "Lucknow",
+        },
+         {
+          name: 'Ravi',
+          grade: 'A',
+          city: "Sitapur",
+        }
+    ];
+
+      console.log(classInfo1);
+      classInfo1[2].city = "Lucknow";
+      console.log(classInfo1);
+      console.log(classInfo1[1].name);
+ ```
+
+# Math Object
+- Collection of mathematical properties and methods.  
+![Math](./img/Math.png)   
+- `Math.floor(-3.3)` // -4 nearest smallest Integer value
+- `Math.floor(-3.3)` // -3 nearest larger Integer value
+
+- Math.random() provide 0 to 1 exclusive. between 0 to 1
+![random](./img/random.png) 
