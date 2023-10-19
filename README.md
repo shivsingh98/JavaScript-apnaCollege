@@ -828,4 +828,9 @@ for(student of marks){
 ```
 
 # TOdo App
-![todo](./img/todo.png) 
+![todo](./img/todo.png)  
+
+```js
+ let max = Number.MIN_VALUE;
+ let min = Number.MAX_VALUE;
+ ```
