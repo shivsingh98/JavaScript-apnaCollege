@@ -1044,5 +1044,179 @@ function greet(name){
 }
 
 // calling function
-greet('Aheet')
+greet('Ajeet')
+
+- you can pass multiple parameter in a function
+- if function is taking an argument and are not passing any parameter it will pass undefined.
+
+function greet(name, age){
+  console.log(`Hi ${name}, How are you? and you age is ${age}`);
+}
+
+function sum(a, b){
+  console.log(a+b);
+}
+
+sum(3, 4)
+```
+
+## Function with return keyword
+
+![return](./img/return.png) 
+
+```js
+// Unreachable code because return keyword terminate the function execution
+function sum(a, b){
+    return a+b;
+    console.log("function end");
+}
+
+return keyword returns single value.
+```
+
+## What is Scope?
+
+- scope determines the accessibility of variables, objects, and functions from different parts of the code.
+
+- Function scope
+- Block scope
+- Lexical
+- Global scope
+
+### Function scope
+variables defined inside a function are not accessible (visible) from outside the function.
+
+```js
+
+function calSum(a, b){
+  let sum = a+b; // Function scope
+}
+
+console.log(sum); // error : sum is not defined
+```
+```js
+let sum = 12; //Global scope
+function calSum(a, b){
+  let sum = a+b; // Function scope
+}
+
+console.log(sum); // 12
+
+// Function scope is more spacific than global scope
+```
+
+### Block Scope
+Variables declared inside a {} block cannot be accessed from outside the block.
+```js
+{
+  let a = 20;
+}
+console.log(a); // a is not defined
+
+// but if you use var instead of let const it will give result because var has global scope
+
+```
+
+### Lexical Scope
+
+a variable defined outside a function can be accessible inside another function defined after the variable declaration.
+
+The opposite is not true.
+
+```js
+function outerFunc(){
+    let x = 5; 
+    let y = 6;
+
+    function innerFunc(){ // we can not use/call innerFunc out side of the outer function because it has function scope that's why we are calling inside outerFunc. 
+        let a = 10;
+        console.log(x);
+        console.log(y);
+    }
+    console.log(a); // error : a is not defined
+    innerFunc()
+}
+
+outerFunc()
+```
+## Function Expression
+```js
+//syntax :
+
+const variable = function(arg1, arg2..){
+  // do or return something
+}
+
+//example
+
+const sum = function(a, b){
+  return a+b;
+}
+sum(2, 3); // 5
+```
+
+## Higher Order Functions
+
+A Function that dose one or both:
+- takes one or multiple functions as arguments
+- returns a function
+```js
+
+function multipleGreet(fnc, count){ // higher order function
+    for(let i=1; i<=count; i++){
+      fnc();
+    }
+  }
+  let greet = function(){
+    console.log("hello");
+  }
+  
+  multipleGreet(greet, 10)
+  multipleGreet(function(){console.log("namaste")}, 10000)
+```
+
+## Higher Order Functions
+Returns a function
+- factory function is a function which produce the function
+
+```js
+  function OddEvenTest(request){
+    if(request == "odd"){
+      return function(n){
+        console.log(n%2!==0);
+      }
+    }else if(request == "even"){
+      return function(n){
+        console.log(n%2===0);
+      }
+    }else{
+      console.log("wrong request");
+    }
+  }
+
+  console.log(OddEvenTest('odd'));
+
+  let func = OddEvenTest('odd');
+  console.log(func(3));
+
+```
+
+## Methods
+
+Action that can be performed on an object.
+- The function which are defined inside a object is called method.
+
+```js
+  const calculator = {
+    num : 55,
+    add: function(a, b){
+      return a+b;
+    },
+    sub: function(a, b){
+      return a-b;
+    },
+    mul: function(a, b){
+      return a*b;
+    }
+  };
 ```
