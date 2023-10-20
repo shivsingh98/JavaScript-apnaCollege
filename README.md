@@ -1000,3 +1000,49 @@ const classInfo = {
 
 - Math.random() provide 0 to 1 exclusive. between 0 to 1
 ![random](./img/random.png) 
+
+# Function 
+- Function is a block of code which perform some task.
+```js
+example:
+
+console.log();
+arr.push();
+.pop();
+```
+- Function Definition (telling JS)
+```js
+function funcName(){
+  // do something
+}
+
+// example
+
+function hello(){
+  console.log("Hi, Good Morning!")
+}
+```
+
+- Function calling (Using the function)
+```js
+  funcName();
+  // example
+  hello();
+```
+
+## Function with Arguments
+- Values we pass to the function
+
+```js
+function funcName(arg1, arg2...){
+  //do something 
+}
+
+// example
+function greet(name){
+  console.log(`Hi ${name}, How are you?`);
+}
+
+// calling function
+greet('Aheet')
+```
