@@ -1220,3 +1220,126 @@ Action that can be performed on an object.
     }
   };
 ```
+
+# this Keyword
+
+"This" keyword refers to an object that is executing the current piece of code.
+
+```js
+const student = {
+    name: "Shiv Singh",
+    age: 24,
+    eng: 98,
+    math: 94,
+    phy: 88,
+    getAvg(){
+        console.log(this); // it will print entire object
+        let avg = (this.eng + this.math + this.phy)/3;
+        console.log(`${this.name} got average marks = ${avg}`);
+    } 
+}
+
+student.getAvg(); // if you write eng instead of this.eng in getAvg method it will give error- RefferenceError: eng is not defined, because our method inside object canot access parameter directly. that's why we write "this" here because this refers to the current object. this means calling object.
+
+function getAvg(){
+    console.log(this); // it will print window object
+}
+
+getAvg()
+
+// window object is a higher level object.
+// window.alert();
+```
+
+# try & catch
+
+- The try statements allows you to define a block of code to be tested for errors while it is being executed. try throws the error.
+- The catch statement allows you to define a block of code to be executed, if an error occurs in the try block. catch caught the errors
+
+```js
+// syntax
+
+try{
+  //
+}catch(err){
+  //
+}
+```
+
+```js
+// console.log(a); // error a is not defined
+
+console.log("hello");
+console.log("hello");
+// let a = 5;
+try{
+    console.log(a);
+}catch(error){
+    console.log(error);
+    console.log("Error : a is not defined");
+}
+console.log("hello2");
+console.log("hello2");
+console.log("hello2");
+
+// if you write only try it will through errer : SyntaxError: Missing catch or finally after try 
+```
+
+# Arrow Functions
+```js
+const func = (arg1, arg2...) => {function defination}
+
+// example
+
+const sum = (a, b) => {
+  console.log(a+b);
+}
+
+sum(2, 3); // calling
+arrow functions are nameless functions.
+If there are only one stmt , you can ignore {} and return. This is called implicit return means automatic return.
+
+const func = (arg1, arg2..) => value;
+
+But () compulsory
+```
+
+
+# setTimeout(function, timeout)
+
+```js
+syntax:
+
+setTimeout(fun, time); // 
+
+console.log("hi there!");
+
+setTimeout( () =>{
+  console.log("justcoder.dev");
+}, 5000);
+console.log("Welcome to ");
+
+after completing whole program setTimeout will execute.
+```
+
+# Set Interval
+
+`setInterval(function, timeout)`
+
+```js
+
+let id = setInterval(() =>{
+  console.log("justcoder.dev")
+}, 3000);
+
+to stop the set interval we use clearInterval() and pass the id.
+
+clearInterval(id);
+
+```
+
+
+# this with Arrow Functions :
+
+this keyword behavies differently with arraow functions.
+- for normal functions scope of this depends on calling objects. but for arrow function depends on Lexical scope(parent scope).
