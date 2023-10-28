@@ -1343,3 +1343,135 @@ clearInterval(id);
 
 this keyword behavies differently with arraow functions.
 - for normal functions scope of this depends on calling objects. but for arrow function depends on Lexical scope(parent scope).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------**part  8 is missing** ----------------------- 
+
+# DOM (Document Object Model)
+- The DOM **represent a document** with a logical tree.
+- It allows us to manipulate/change webpage content (HTML elements).
+
+![DOM](./img/dom.png)    
+
+- document, body, div, ul, li, h1 are called node. Every node is the object of javascript.
+
+```js
+console.log(document);
+console.dir(document);
+console.dir(document.all);
+console.dir(document.all[8]);
+```
+
+# Selecting Elements
+
+## Selecting Elements Using ID
+
+`getElementById`
+- Returns the element as an object or null (if not found).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## ============Terminal================
+## The Terminal
+- A text based input and output environment.
+
+**Advantages**
+- helps to Install packages
+- helps in Git
+- Improve speed
+- Access of hidden files
+
+![terms](./img/terms.png)   
+
+- Install git bash in windows.   
+[Download Git](https://git-scm.com/download) 
+
+- to check version of Git `git --version` or `git -v`
+
+## Basic Command
+- `ls = list files` show my files
+- `pwd = print working directory` (where am i?)
+- `clear = clear screen`
+
+## Navigation
+- Inside & outside Directories
+- `cd = change directory` example : cd Desktop
+- `cd ..` = back button
+
+**Note :** If file or directory not found : No such file or directory found.
+
+
+## Paths in Navigation
+![path](./img/path.png)   
+
+- relative path is relative to our current location(working directory).
+
+
+## Making Directories
+- `mkdir = make directory`
+- if folder with same name is already available so we can not make folder.
+
+## Flags
+- Flags are characters that we pass with commands to modify their behaviour
+
+### manual Command
+- `man ls = give info about ls command`
+- `man mkdir = give info about mkdir command`
+
+### with Flag
+- `ls /`
+- `ls -a`
+- `ls -/a` not working
+- to exit `q`
+
+## Touch 
+- Used to create files
+- `touch index.html`
+- `touch app.js`
+- `touch abc.txt`
+- We can also create file without extension.
+
+## Deleting Files & Folder
+- File will be delete permanently
+- `rm - remove files` rm index.html app.js
+- `rmdir - remove empty folders`
+- `rm -rf - remove any folders`
+- rf are individual flags
+- r stands for recursive delete
+- f stands for forced
